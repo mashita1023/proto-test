@@ -12,10 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Make create website
-          run: |
-            buf generate --template buf.gen-web.yaml
-            cd website && npx docusaurus generate-proto-docs && npm run build
+      - name: Generate buf
+          run: buf generate --template buf.gen-web.yaml
+
+      - name: Build website
+          run:  cd website && npx docusaurus generate-proto-docs && npm run build
 
       - name: actions/upload-pages-artifact@v1
         with:
