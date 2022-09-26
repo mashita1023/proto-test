@@ -19,11 +19,15 @@ jobs:
 
       - name: Set Node.js 14.x
         uses: actions/setup-node@v3
-        with: node-version: 16.x
+        with:
+          node-version: 16.x
 
       - uses: bufbuild/buf-setup-action@v1.8.0
         with:
           version: latest
+
+      - name: Install protoc-gen-doc
+        run: go get -u github.com/pseudomuto/protoc-gen-doc
 
       - name: Generate buf
         run: buf generate --template buf.gen-web.yaml
