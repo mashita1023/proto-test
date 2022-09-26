@@ -40,7 +40,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: webpage/build
+          path: website/build
 
   deploy:
     needs: build
