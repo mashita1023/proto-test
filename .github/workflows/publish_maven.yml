@@ -27,7 +27,7 @@ jobs:
           version: latest
 
       - name: Install protoc-gen-doc
-        run: go install github.com/pseudomuto/protoc-gen-doc@latest
+        run: go install github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@v1.5.1
 
       - name: Generate buf
         run: buf generate --template buf.gen-web.yaml
