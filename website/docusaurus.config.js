@@ -2,10 +2,10 @@
 module.exports = {
   title: "Protobuffet",
   tagline: "Documentation Toolset for Your Protobuf Workspace",
-  url: "https://protobuffet.com",
-  baseUrl: "/",
-  organizationName: "protobuffet", // Usually your GitHub org/user name.
-  projectName: "protobuffet.github.io", // Usually your repo name.
+  url: "https://mashita1023.github.io",
+  baseUrl: "/proto-test",
+  organizationName: "mashita1023", // Usually your GitHub org/user name.
+  projectName: "proto-test", // Usually your repo name.
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
