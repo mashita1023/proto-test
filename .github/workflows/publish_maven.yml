@@ -14,8 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: build command
-        run: |
+      - run: |
           make gen-web
 
       - name: actions/upload-pages-artifact@v1
