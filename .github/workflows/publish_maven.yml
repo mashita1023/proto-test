@@ -1,0 +1,39 @@
+name: Publish Maven
+
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: build command
+        run: |
+          make gen-web
+
+      - name: actions/upload-pages-artifact@v1
+        with:
+          path: webpage/build
+
+  deploy:
+    needs: buld
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+        
+        
