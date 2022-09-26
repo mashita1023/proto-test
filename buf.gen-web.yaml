@@ -1,0 +1,7 @@
+version: v1
+plugins:
+  - name: doc
+    out: ./website/fixtures
+    strategy: all
+    opt:
+      - json,proto_workspace.json

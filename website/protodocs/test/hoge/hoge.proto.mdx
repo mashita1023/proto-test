@@ -1,0 +1,50 @@
+---
+title: hoge.proto
+hide_title: true
+---
+
+import { ProtoMessage, ProtoServiceMethod, ProtoEnum } from '@theme/ProtoFile';
+
+## `hoge.proto`
+_**path** test/hoge/hoge.proto_
+
+_**package** _
+
+
+
+---
+
+## Messages
+
+
+### `HogeRequest`
+<ProtoMessage key={0} message={{"name":"HogeRequest","longName":"HogeRequest","fullName":".HogeRequest","description":"","hasExtensions":false,"hasFields":false,"hasOneofs":false,"extensions":[],"fields":[]}} />
+
+
+### `HogeResponse`
+<ProtoMessage key={1} message={{"name":"HogeResponse","longName":"HogeResponse","fullName":".HogeResponse","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"code","description":"","label":"","type":"HogeCode","longType":"HogeCode","fullType":"HogeCode","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"message","description":"","label":"","type":"StringValue","longType":"google.protobuf.StringValue","fullType":"google.protobuf.StringValue","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"created","description":"","label":"","type":"Timestamp","longType":"google.protobuf.Timestamp","fullType":"google.protobuf.Timestamp","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+---
+## Enums
+
+
+### `HogeCode`
+<ProtoEnum key={0} enumb={{"name":"HogeCode","longName":"HogeCode","fullName":".HogeCode","description":"","values":[{"name":"UNKNOWN","number":"0","description":""},{"name":"SUNCCESS","number":"1","description":""},{"name":"FORBIDDEN","number":"2","description":""}]}} />
+
+---
+## Services
+
+
+### `Hoge`
+
+
+
+
+#### `GetHoge`
+<ProtoServiceMethod key={'GetHoge-0'} method={{"name":"GetHoge","description":"","requestType":"HogeRequest","requestLongType":".HogeRequest","requestFullType":"HogeRequest","requestStreaming":false,"responseType":"HogeResponse","responseLongType":".HogeResponse","responseFullType":"HogeResponse","responseStreaming":false}} />
+
+
+---
+
+
+  

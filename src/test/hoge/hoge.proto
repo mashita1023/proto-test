@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+service Hoge {
+  rpc GetHoge (HogeRequest) returns (HogeResponse);
+}
+
+enum HogeCode {
+  UNKNOWN = 0;
+  SUNCCESS = 1;
+  FORBIDDEN = 2;
+}
+
+message HogeResponse {
+  HogeCode code = 1;
+  google.protobuf.StringValue message = 2;
+  google.protobuf.Timestamp created = 3;
+}
+
+message HogeRequest {
+}
